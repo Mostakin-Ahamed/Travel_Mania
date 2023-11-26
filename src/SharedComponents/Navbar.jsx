@@ -6,7 +6,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Navbar = () => {
-    // const { logOut } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
     const handleSignOut = () => {
         logOut()
             .then()
@@ -32,7 +32,7 @@ const Navbar = () => {
                                     navLinks
                                 }
                                 {
-                                    // user ?
+                                    user ?
                                         <li className="">
                                             <a>Dashboard</a>
                                             <ul className="p-2">
@@ -40,15 +40,13 @@ const Navbar = () => {
                                                 <li><Link to='/addService'><a>Add Services</a></Link></li>
                                                 <li><Link to='/mySchedules'><a>My Schedules</a></Link></li>
                                             </ul>
-                                            <NavLink className="mx-3" to='/login'>Login</NavLink>
-                                        </li> 
-                                        // : <li><NavLink className="mx-3" to='/login'>Login</NavLink></li>
+                                        </li> : <li><NavLink className="mx-3" to='/login'>Login</NavLink></li>
                                 }
 
                             </ul>
                         </div>
-                        <div className="lg:flex md:flex"><img className="h-[35px] ml-3" src="/icon.svg" alt="" />
-                        <Link to="/"><a className="btn btn-ghost normal-case text-xl">Travel Mania</a></Link></div>
+                        <div className="lg:flex md:flex"><img className="h-[35px] ml-3" src="/logo.svg" alt="" />
+                        <Link to="/"><a className="btn btn-ghost normal-case text-xl">ToolShare</a></Link></div>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
@@ -56,7 +54,7 @@ const Navbar = () => {
                                 navLinks
                             }
                             {
-                                // user ?
+                                user ?
                                     <li tabIndex={0}>
                                         <details>
                                             <summary>Dashboard</summary>
@@ -67,14 +65,12 @@ const Navbar = () => {
 
                                             </ul>
                                         </details>
-                                        <NavLink className="mx-3" to='/login'>Login</NavLink>
-                                    </li> 
-                                    // : <li><NavLink className="mx-3" to='/login'>Login</NavLink></li>
+                                    </li> : <li><NavLink className="mx-3" to='/login'>Login</NavLink></li>
                             }
 
                         </ul>
                     </div>
-                    {/* <div className="navbar-end">
+                    <div className="navbar-end">
                         {
                             // <h3 className="text-bold font-2xl mr-5">Username</h3>
                             user && <h3 className="text-bold font-2xl mr-5">{user.displayName}</h3>
@@ -90,7 +86,7 @@ const Navbar = () => {
                             user && <button onClick={handleSignOut} className="btn bg-red-300 ml"> Log Out</button>
                         }
 
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </div>
