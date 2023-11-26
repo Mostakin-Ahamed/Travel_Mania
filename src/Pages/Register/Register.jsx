@@ -10,84 +10,81 @@ import { AuthContext } from "../../Provider/AuthProvider";
 const Register = () => {
 
     
-    // const { createUser, googleRegister } = useContext(AuthContext);
-    // const location = useLocation();
-    // const navigate = useNavigate();
+    const { createUser, googleRegister } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
 
-    // const handleRegister = e => {
-    //     e.preventDefault();
-    //     console.log(e.currentTarget);
-    //     const form = new FormData(e.currentTarget);
+    const handleRegister = e => {
+        e.preventDefault();
+        console.log(e.currentTarget);
+        const form = new FormData(e.currentTarget);
 
-    //     const email = form.get('email');
-    //     const password = form.get('password');
-    //     const name = form.get('name');
-    //     const photo = form.get('photoURL');
+        const email = form.get('email');
+        const password = form.get('password');
+        const name = form.get('name');
+        const photo = form.get('photoURL');
         
-    //     if(password.length<6){
-    //         Swal.fire({
-    //             title: 'Error!',
-    //             text: 'Password must be 6 characters or longer!',
-    //             icon: 'error',
-    //             confirmButtonText: 'Cool'
-    //           })
-    //         return;
-    //     }
-    //     else if(!/[A-Z]/.test(password)){
-    //         Swal.fire({
-    //             title: 'Error!',
-    //             text: 'Password must be 6 characters or longer!',
-    //             icon: 'error',
-    //             confirmButtonText: 'Cool'
-    //           })
-    //         return;
-    //     }
+        if(password.length<6){
+            Swal.fire({
+                title: 'Error!',
+                text: 'Password must be 6 characters or longer!',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })
+            return;
+        }
+        else if(!/[A-Z]/.test(password)){
+            Swal.fire({
+                title: 'Error!',
+                text: 'Password must be 6 characters or longer!',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })
+            return;
+        }
 
-    //     createUser(email, password)
-    //         .then(result => {
-    //             console.log(result.user);
-    //             Swal.fire({
-    //                 title: 'Success!',
-    //                 text: 'User created successfully!',
-    //                 icon: 'success',
-    //                 confirmButtonText: 'Cool'
-    //               })
-    //             updateProfile(result.user, {
-    //                 displayName: name,
-    //                 photoURL:photo
-    //             })
-    //             .then(()=>console.log("profile updated"))
-    //             .catch()
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'User created successfully!',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+                updateProfile(result.user, {
+                    displayName: name,
+                    photoURL:photo
+                })
+                .then(()=>console.log("profile updated"))
+                .catch()
                 
                 
-    //             navigate(location?.state? location.state : '/')
-    //         })
+                navigate(location?.state? location.state : '/')
+            })
             
-    //         .catch(error => {
+            .catch(error => {
 
-    //              Swal.fire({
-    //                 title: 'Error!',
-    //                 text: error.message,
-    //                 icon: 'error',
-    //                 confirmButtonText: 'Cool'
-    //               })
-    //         })
-    // }
-    // const handleGoogleRegister = e =>{
-    //     e.preventDefault();
-    //     googleRegister();
-    //     navigate(location?.state? location.state : '/')
+                 Swal.fire({
+                    title: 'Error!',
+                    text: error.message,
+                    icon: 'error',
+                    confirmButtonText: 'Cool'
+                  })
+            })
+    }
+    const handleGoogleRegister = e =>{
+        e.preventDefault();
+        googleRegister();
+        navigate(location?.state? location.state : '/')
 
-    // }
-
-    // onSubmit={handleRegister}
-    // onClick={handleGoogleRegister}
+    }
 
     return (
         <div className="mb-48">
             <div >
                 <h2 className="text-3xl my-10 text-center">Please Register!</h2>
-                <form  className="w-1/2 lg:w-1/2 md:3/4 mx-auto">
+                <form onSubmit={handleRegister} className="w-1/2 lg:w-1/2 md:3/4 mx-auto">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Name</span>
@@ -117,7 +114,7 @@ const Register = () => {
                     </div>
                 </form>
                 <div className="flex justify-center w-full mt-6">
-                    <button  className="btn btn-primary">Register with google <img className="h-[25px]" src="/google.svg" alt="" /></button>
+                    <button onClick={handleGoogleRegister} className="btn btn-primary">Register with google <img className="h-[25px]" src="/google.svg" alt="" /></button>
                 </div>
                 <p className="text-center mt-5">Already have an account? <Link className="text-blue-600" to="/login">Login Here! </Link></p>
             </div>
