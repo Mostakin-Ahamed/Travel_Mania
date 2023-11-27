@@ -1,10 +1,15 @@
+import Banner from "./Components/Banner/Banner";
+import TourismAndTravel from "./Components/Tabs/TourismAndTravel";
+import Story from "./Components/TouristStory/Story";
+import TourType from "./Components/ToutType/TourType";
 
 const Home = () => {
     return (
         <div>
-            <h2>This is home page
-
-            </h2>
+            <Banner></Banner>
+            <TourismAndTravel></TourismAndTravel>
+            <TourType></TourType>
+            <Story></Story>
         </div>
     );
 };

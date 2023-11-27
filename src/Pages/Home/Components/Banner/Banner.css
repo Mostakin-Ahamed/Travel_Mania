@@ -1,0 +1,34 @@
+
+
+#header {
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 400px;
+}
+
+#header-text {
+    color: var(--text-color-heading, #110804);
+    font-family: 'Satoshi';
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: -1.4px;
+    text-transform: uppercase;
+}
+
+#support-text {
+    color: var(--text-color-paragraph-light, #897C76);
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.separator {
+    height: 1px;
+    background-color: rgb(205, 200, 200);
+    border: none;
+    border-style: dashed;
+}
