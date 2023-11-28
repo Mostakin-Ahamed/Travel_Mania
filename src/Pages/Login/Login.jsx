@@ -1,12 +1,8 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-// import { AuthContext } from "../Firebase/firebase.config";
-// import { FcGoogle } from 'react-icons/fc';
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 
-// import { toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {

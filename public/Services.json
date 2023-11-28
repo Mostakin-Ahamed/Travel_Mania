@@ -1,0 +1,272 @@
+[
+    {
+        "service_id": 1,
+        "service_name": "Guided City Tour",
+        "description": "Explore the city with a knowledgeable guide who provides insights into local history and culture.",
+        "price": 50.00,
+        "duration_hours": 3,
+        "tour_type": "Walking",
+        "image": "guided_city_tour.jpg"
+    },
+    {
+        "service_id": 2,
+        "service_name": "Adventure Excursion",
+        "description": "Embark on an adrenaline-pumping adventure with activities like hiking, zip-lining, and rock climbing.",
+        "price": 80.00,
+        "duration_hours": 5,
+        "tour_type": "Sports",
+        "image": "adventure_excursion.jpg"
+    },
+    {
+        "service_id": 3,
+        "service_name": "Cultural Heritage Tour",
+        "description": "Visit historical landmarks and museums to learn about the rich cultural heritage of the region.",
+        "price": 40.00,
+        "duration_hours": 4,
+        "tour_type": "Walking",
+        "image": "cultural_heritage_tour.jpg"
+    },
+    {
+        "service_id": 4,
+        "service_name": "Cruise Experience",
+        "description": "Enjoy a scenic cruise along the coast, complete with entertainment and dining options.",
+        "price": 100.00,
+        "duration_hours": 6,
+        "tour_type": "Air Rides",
+        "image": "cruise_experience.jpg"
+    },
+    {
+        "service_id": 5,
+        "service_name": "Wildlife Safari",
+        "description": "Embark on a safari adventure to observe and photograph wildlife in their natural habitat.",
+        "price": 120.00,
+        "duration_hours": 8,
+        "tour_type": "Wildlife",
+        "image": "wildlife_safari.jpg"
+    },
+    {
+        "service_id": 6,
+        "service_name": "Luxury Resort Stay",
+        "description": "Indulge in a luxurious stay at a high-end resort with top-notch amenities and services.",
+        "price": 200.00,
+        "duration_nights": 2,
+        "tour_type": "Relaxation",
+        "image": "luxury_resort_stay.jpg"
+    },
+    {
+        "service_id": 7,
+        "service_name": "Food Tasting Tour",
+        "description": "Explore the local culinary scene with a guided tour to taste authentic dishes and specialties.",
+        "price": 60.00,
+        "duration_hours": 3,
+        "tour_type": "Walking",
+        "image": "food_tasting_tour.jpg"
+    },
+    {
+        "service_id": 8,
+        "service_name": "Wine Tasting Experience",
+        "description": "Visit renowned wineries to sample a variety of wines and learn about the winemaking process.",
+        "price": 75.00,
+        "duration_hours": 4,
+        "tour_type": "Walking",
+        "image": "wine_tasting_experience.jpg"
+    },
+    {
+        "service_id": 9,
+        "service_name": "Scuba Diving Adventure",
+        "description": "Dive into the underwater world and explore vibrant coral reefs and marine life.",
+        "price": 90.00,
+        "duration_hours": 5,
+        "tour_type": "Sports",
+        "image": "scuba_diving_adventure.jpg"
+    },
+    {
+        "service_id": 10,
+        "service_name": "Historical Walking Tour",
+        "description": "Take a leisurely walk through historic neighborhoods and learn about the architecture and stories behind them.",
+        "price": 35.00,
+        "duration_hours": 2,
+        "tour_type": "Walking",
+        "image": "historical_walking_tour.jpg"
+    },
+    {
+        "service_id": 11,
+        "service_name": "Ski Resort Package",
+        "description": "Experience the thrill of skiing with a package that includes equipment rental and lessons.",
+        "price": 150.00,
+        "duration_days": 3,
+        "tour_type": "Sports",
+        "image": "ski_resort_package.jpg"
+    },
+    {
+        "service_id": 12,
+        "service_name": "Hot Air Balloon Ride",
+        "description": "Soar above scenic landscapes in a hot air balloon for a breathtaking aerial view.",
+        "price": 120.00,
+        "duration_hours": 2,
+        "tour_type": "Air Rides",
+        "image": "hot_air_balloon_ride.jpg"
+    },
+    {
+        "service_id": 13,
+        "service_name": "Photography Tour",
+        "description": "Capture stunning moments with a professional photographer guiding you to picturesque locations.",
+        "price": 80.00,
+        "duration_hours": 4,
+        "tour_type": "Walking",
+        "image": "photography_tour.jpg"
+    },
+    {
+        "service_id": 14,
+        "service_name": "Beach Resort Getaway",
+        "description": "Relax on pristine beaches and enjoy the sun and sea at a beautiful beachfront resort.",
+        "price": 180.00,
+        "duration_nights": 4,
+        "tour_type": "Relaxation",
+        "image": "beach_resort_getaway.jpg"
+    },
+    {
+        "service_id": 15,
+        "service_name": "Helicopter Tour",
+        "description": "Take to the skies in a helicopter for an exhilarating tour with stunning aerial views.",
+        "price": 250.00,
+        "duration_hours": 1.5,
+        "tour_type": "Air Rides",
+        "image": "helicopter_tour.jpg"
+    },
+    {
+        "service_id": 16,
+        "service_name": "Zip Line Adventure",
+        "description": "Soar through the treetops on a thrilling zip line adventure.",
+        "price": 70.00,
+        "duration_hours": 3,
+        "tour_type": "Sports",
+        "image": "zip_line_adventure.jpg"
+    },
+    {
+        "service_id": 17,
+        "service_name": "Museum Exploration",
+        "description": "Immerse yourself in art, history, and culture with visits to local museums.",
+        "price": 45.00,
+        "duration_hours": 3,
+        "tour_type": "Walking",
+        "image": "museum_exploration.jpg"
+    },
+    {
+        "service_id": 18,
+        "service_name": "Fishing Expedition",
+        "description": "Embark on a fishing adventure in scenic lakes or rivers.",
+        "price": 85.00,
+        "duration_hours": 6,
+        "tour_type": "Sports",
+        "image": "fishing_expedition.jpg"
+    },
+    {
+        "service_id": 19,
+        "service_name": "Nature Hike",
+        "description": "Explore scenic trails and enjoy the beauty of nature on a guided hike.",
+        "price": 55.00,
+        "duration_hours": 4,
+        "tour_type": "Hiking",
+        "image": "nature_hike.jpg"
+    },
+    {
+        "service_id": 20,
+        "service_name": "Parasailing Experience",
+        "description": "Soar high above the water with a thrilling parasailing experience.",
+        "price": 95.00,
+        "duration_hours": 2,
+        "tour_type": "Air Rides",
+        "image": "parasailing_experience.jpg"
+    },
+    {
+        "service_id": 21,
+        "service_name": "City Bike Tour",
+        "description": "Explore the city on two wheels with a guided bike tour through its iconic landmarks.",
+        "price": 40.00,
+        "duration_hours": 2,
+        "tour_type": "Sports",
+        "image": "city_bike_tour.jpg"
+    },
+    {
+        "service_id": 22,
+        "service_name": "Art Gallery Tour",
+        "description": "Discover local art scenes and visit galleries showcasing contemporary and traditional art.",
+        "price": 65.00,
+        "duration_hours": 3,
+        "tour_type": "Walking",
+        "image": "art_gallery_tour.jpg"
+    },
+    {
+        "service_id": 23,
+        "service_name": "Sailing Excursion",
+        "description": "Set sail on a relaxing sailing excursion along the coastline.",
+        "price": 110.00,
+        "duration_hours": 5,
+        "tour_type": "Air Rides",
+        "image": "sailing_excursion.jpg"
+    },
+    {
+        "service_id": 24,
+        "service_name": "Bird Watching Tour",
+        "description": "Observe a variety of bird species in their natural habitats with an experienced guide.",
+        "price": 75.00,
+        "duration_hours": 4,
+        "tour_type": "Wildlife",
+        "image": "bird_watching_tour.jpg"
+    },
+    {
+        "service_id": 25,
+        "service_name": "Golf Resort Getaway",
+        "description": "Enjoy a relaxing golf retreat at a scenic resort with top-notch golf courses.",
+        "price": 160.00,
+        "duration_days": 3,
+        "tour_type": "Sports",
+        "image": "golf_resort_getaway.jpg"
+    },
+    {
+        "service_id": 26,
+        "service_name": "Segway Tour",
+        "description": "Explore the city effortlessly on a Segway with a fun and informative guided tour.",
+        "price": 55.00,
+        "duration_hours": 2,
+        "tour_type": "Sports",
+        "image": "segway_tour.jpg"
+    },
+    {
+        "service_id": 27,
+        "service_name": "Desert Safari",
+        "description": "Experience the thrill of a desert adventure with dune bashing and camel rides.",
+        "price": 130.00,
+        "duration_hours": 6,
+        "tour_type": "Wildlife",
+        "image": "desert_safari.jpg"
+    },
+    {
+        "service_id": 28,
+        "service_name": "Cooking Class Experience",
+        "description": "Learn to prepare local dishes with a hands-on cooking class led by a skilled chef.",
+        "price": 60.00,
+        "duration_hours": 3,
+        "tour_type": "Walking",
+        "image": "cooking_class_experience.jpg"
+    },
+    {
+        "service_id": 29,
+        "service_name": "Amusement Park Day Pass",
+        "description": "Enjoy a day of fun and excitement with a pass to a popular amusement park.",
+        "price": 70.00,
+        "duration_hours": 8,
+        "tour_type": "Sports",
+        "image": "amusement_park_day_pass.jpg"
+    },
+    {
+        "service_id": 30,
+        "service_name": "Yacht Charter",
+        "description": "Experience luxury on the water with a private yacht charter for a day or evening.",
+        "price": 300.00,
+        "duration_hours": 4,
+        "tour_type": "Air Rides",
+        "image": "yacht_charter.jpg"
+    }
+]

@@ -1,0 +1,47 @@
+[
+    {
+        "guide_id": 1,
+        "name": "Alice Johnson",
+        "email": "alice.johnson@example.com",
+        "price_per_hour": 30.00,
+        "phone_number": "+1 (555) 123-4567",
+        "photo": "alice.jpg",
+        "rating": 4.8
+    },
+    {
+        "guide_id": 2,
+        "name": "John Smith",
+        "email": "john.smith@example.com",
+        "price_per_hour": 35.00,
+        "phone_number": "+1 (555) 987-6543",
+        "photo": "john.jpg",
+        "rating": 4.5
+    },
+    {
+        "guide_id": 3,
+        "name": "Elena Rodriguez",
+        "email": "elena.rodriguez@example.com",
+        "price_per_hour": 40.00,
+        "phone_number": "+1 (555) 876-5432",
+        "photo": "elena.jpg",
+        "rating": 4.9
+    },
+    {
+        "guide_id": 4,
+        "name": "David Lee",
+        "email": "david.lee@example.com",
+        "price_per_hour": 25.00,
+        "phone_number": "+1 (555) 234-5678",
+        "photo": "david.jpg",
+        "rating": 4.7
+    },
+    {
+        "guide_id": 5,
+        "name": "Sophia Brown",
+        "email": "sophia.brown@example.com",
+        "price_per_hour": 28.00,
+        "phone_number": "+1 (555) 345-6789",
+        "photo": "sophia.jpg",
+        "rating": 4.6
+    }
+]

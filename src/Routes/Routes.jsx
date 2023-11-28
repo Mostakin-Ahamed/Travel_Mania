@@ -9,6 +9,11 @@ import Community from "../Pages/Community/Community";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import Blogs from "../Pages/Blogs/Blogs";
 import AboutUs from "../Pages/AboutUs/AboutUs";
+import Wildlife from "../Pages/Tour Pages/Wildlife/Wildlife";
+import Walking from "../Pages/Tour Pages/Walking/Walking";
+import Hiking from "../Pages/Tour Pages/Hiking/Hiking";
+import AirRides from "../Pages/Tour Pages/Air Rides/AirRides";
+import Sports from "../Pages/Tour Pages/Sports/Sports";
 
 
   export const router = createBrowserRouter([
@@ -44,6 +49,31 @@ import AboutUs from "../Pages/AboutUs/AboutUs";
           path:'/aboutUs',
           element:<AboutUs></AboutUs>
         },
+        {
+          path:'/tours/wildlife',
+          element:<Wildlife></Wildlife>
+        }
+        ,
+        {
+          path:'/tours/walking',
+          element:<Walking></Walking>
+        } 
+        ,
+        {
+          path:'/tours/hiking',
+          element:<Hiking></Hiking>
+        } 
+        ,
+        {
+          path:'/tours/airRides',
+          element:<AirRides></AirRides>
+        } 
+        ,
+        {
+          path:'/tours/sports',
+          element:<Sports></Sports>
+        } 
+        
 
       ]
     },

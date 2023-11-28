@@ -1,0 +1,42 @@
+[
+    {
+        "user_id": 1,
+        "username": "happy_traveler_123",
+        "service_id": 3,
+        "rating": 4.5,
+        "comment": "The cultural heritage tour was amazing! The guide was knowledgeable, and I learned so much.",
+        "date": "2023-04-15"
+    },
+    {
+        "user_id": 2,
+        "username": "adventure_seeker",
+        "service_id": 2,
+        "rating": 5,
+        "comment": "The adventure excursion was a blast! Thrilling activities and a great overall experience.",
+        "date": "2023-04-12"
+    },
+    {
+        "user_id": 3,
+        "username": "globetrotter_mike",
+        "service_id": 6,
+        "rating": 4.8,
+        "comment": "Luxury resort stay exceeded my expectations. The amenities and service were top-notch.",
+        "date": "2023-04-10"
+    },
+    {
+        "user_id": 4,
+        "username": "explorer_jane",
+        "service_id": 11,
+        "rating": 4.7,
+        "comment": "Ski resort package was fantastic! Enjoyed the slopes and the entire skiing experience.",
+        "date": "2023-04-08"
+    },
+    {
+        "user_id": 5,
+        "username": "vacationlover22",
+        "service_id": 14,
+        "rating": 5,
+        "comment": "Beach resort getaway was a dream! Beautiful location, relaxing atmosphere, and great service.",
+        "date": "2023-04-05"
+    }
+]

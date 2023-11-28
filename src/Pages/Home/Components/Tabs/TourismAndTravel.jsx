@@ -14,8 +14,7 @@ const TourismAndTravel = () => {
                 </TabList>
                 <TabPanel></TabPanel>
                 <TabPanel></TabPanel>
-                <TabPanel></TabPanel>
-                <TabPanel></TabPanel>
+                <TabPanel></TabPanel>   
             </Tabs>
             <hr className='border-dashed border-gray-400' />
         </div>

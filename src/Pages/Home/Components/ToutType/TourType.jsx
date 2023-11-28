@@ -10,8 +10,19 @@ import './styles.css';
 
 // import required modules
 import { EffectCoverflow, Pagination } from 'swiper/modules';
+// import useTourTypes from '../../../../Hooks/useTourTypes';
+import { Link } from 'react-router-dom';
 
 const TourType = () => {
+
+    // const [tour] = useTourTypes();
+    // const wildlife = tour.filter(tour => tour.tour_type ==='Wildlife')
+    // const walking = tour.filter(tour => tour.tour_type ==='Walking')
+    // const airRides = tour.filter(tour => tour.tour_type ==='Air Rides')
+    // const sports = tour.filter(tour => tour.tour_type ==='Sports')
+    // const hiking = tour.filter(tour => tour.tour_type ==='Hiking')
+
+
     return (
         <div className='mt-10'>
             <div>
@@ -34,37 +45,26 @@ const TourType = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <img className='w-full h-full object-cover' src="/wildlife.jpg" />
-                    <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Wildlife</h2>
+                    <Link to={'/tours/wildlife'}><img className='w-full h-full object-cover' src="/wildlife.jpg" />
+                    <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Wildlife</h2></Link>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='h-full object-cover' src="/sports.jpeg" />
-                    <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Sports</h2>
+                    <Link to={'/tours/sports'}><img className='h-full object-cover' src="/sports.jpeg" />
+                    <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Sports</h2></Link>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='h-full object-cover' src="/hiking.jpg" />
-                    <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Hiking</h2>
+                    <Link to={'/tours/hiking'}><img className='h-full object-cover' src="/hiking.jpg" />
+                    <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Hiking</h2></Link>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='h-full object-cover' src="/walking.jpg" />
-                    <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Walking</h2>
+                    <Link to={'/tours/walking'}><img className='h-full object-cover' src="/walking.jpg" />
+                    <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Walking</h2></Link>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='h-full object-cover' src="/air-rides.jpg" />
-                    <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Air Rides</h2>
+                    <Link to={'/tours/airRides'}><img className='h-full object-cover' src="/air-rides.jpg" />
+                    <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Air Rides</h2></Link>
                 </SwiperSlide>
-                {/* <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide> */}
+                
             </Swiper>
             <hr className='border-dashed border-gray-400' />
         </div>
