@@ -14,6 +14,7 @@ import Walking from "../Pages/Tour Pages/Walking/Walking";
 import Hiking from "../Pages/Tour Pages/Hiking/Hiking";
 import AirRides from "../Pages/Tour Pages/Air Rides/AirRides";
 import Sports from "../Pages/Tour Pages/Sports/Sports";
+import AllTour from "../Pages/All Tour/AllTour";
 
 
   export const router = createBrowserRouter([
@@ -72,7 +73,11 @@ import Sports from "../Pages/Tour Pages/Sports/Sports";
         {
           path:'/tours/sports',
           element:<Sports></Sports>
-        } 
+        },
+        {
+          path:'/allTours',
+          element:<AllTour></AllTour>
+        }
         
 
       ]

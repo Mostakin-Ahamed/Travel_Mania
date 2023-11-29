@@ -1,11 +1,9 @@
+// eslint-disable-next-line react/prop-types
 const TourCard = ({item}) => {
 
     const {
-        service_name,
-        description,
-        price,
-        duration_hours,
-        tour_type, image} = item;
+        // eslint-disable-next-line react/prop-types
+        service_name,description,price,duration_hours,tour_type, image} = item;
 
     return (
         <div className="max-h-[650px] pl-32 mb-10">
