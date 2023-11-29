@@ -1,6 +1,6 @@
 [
     {
-        "user_id": 1,
+        
         "username": "happy_traveler_123",
         "service_id": 3,
         "rating": 4.5,
@@ -8,7 +8,7 @@
         "date": "2023-04-15"
     },
     {
-        "user_id": 2,
+        
         "username": "adventure_seeker",
         "service_id": 2,
         "rating": 5,
@@ -16,7 +16,7 @@
         "date": "2023-04-12"
     },
     {
-        "user_id": 3,
+        
         "username": "globetrotter_mike",
         "service_id": 6,
         "rating": 4.8,
@@ -24,7 +24,7 @@
         "date": "2023-04-10"
     },
     {
-        "user_id": 4,
+        
         "username": "explorer_jane",
         "service_id": 11,
         "rating": 4.7,
@@ -32,7 +32,7 @@
         "date": "2023-04-08"
     },
     {
-        "user_id": 5,
+        
         "username": "vacationlover22",
         "service_id": 14,
         "rating": 5,

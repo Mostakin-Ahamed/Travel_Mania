@@ -27,7 +27,8 @@ body {
   height: 300px;
 }
 
-.swiper-slide img {
+/* .swiper-slide> img {
   display: block;
   width: 100%;
-}
+  object-fit: cover;
+} */

@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
-import './styles.css';
+import './tourStyles.css';
 
 // import required modules
 import { EffectCoverflow, Pagination } from 'swiper/modules';
@@ -15,12 +15,6 @@ import { Link } from 'react-router-dom';
 
 const TourType = () => {
 
-    // const [tour] = useTourTypes();
-    // const wildlife = tour.filter(tour => tour.tour_type ==='Wildlife')
-    // const walking = tour.filter(tour => tour.tour_type ==='Walking')
-    // const airRides = tour.filter(tour => tour.tour_type ==='Air Rides')
-    // const sports = tour.filter(tour => tour.tour_type ==='Sports')
-    // const hiking = tour.filter(tour => tour.tour_type ==='Hiking')
 
 
     return (

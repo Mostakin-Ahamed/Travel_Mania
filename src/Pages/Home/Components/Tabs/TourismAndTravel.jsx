@@ -26,9 +26,10 @@ const TourismAndTravel = () => {
     const packages = tour.slice(0, 3);
     const [guides, setGuides] = useState([])
     useEffect(() => {
-        fetch('/Guides.json')
+        fetch('http://localhost:5000/allGuides')
             .then(res => res.json())
             .then(data => setGuides(data))
+
     })
     return (
         <div>
@@ -79,14 +80,21 @@ const TourismAndTravel = () => {
                         >
 
                             {
-                                guides.map(guide => <SwiperSlide key={guide.guide_id} >
-                                    <div className="hero min-h-screen bg-base-200">
+                                guides.map(guide => <SwiperSlide key={guide._id} >
+                                    <div className="hero min-h-full ">
                                         <div className="hero-content flex-col lg:flex-row">
-                                            <img src={guide.photo} className="max-w-sm rounded-lg shadow-2xl" />
+                                            {/* <img src={guide.photo} className="max-w-sm object-cover avatar shadow-2xl mr-8" /> */}
+                                            <div className="avatar mr-10">
+                                                <div className="w-64 rounded-full">
+                                                    <img src={guide.photo} />
+                                                </div>
+                                            </div>
                                             <div>
-                                                <h1 className="text-5xl font-bold">Box Office News!</h1>
-                                                <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                                                <button className="btn btn-primary">Get Started</button>
+                                                <h1 className="text-3xl font-bold">Name: {guide.name}</h1>
+                                                <h1 className="text-2xl font-bold">Email: {guide.email}</h1>
+                                                <h1 className="text-xl font-bold">Phone: {guide.phone_number}</h1>
+                                                <p className="py-6 text-lg">Price per hour: $ {guide.price_per_hour}</p>
+                                                <button className="btn btn-primary">Show Details</button>
                                             </div>
                                         </div>
                                     </div></SwiperSlide>)

@@ -24,7 +24,8 @@ const Banner = () => {
                                 </div>
                             </div>
                             <div className='w-[358px] mt-8 text-justify'>
-                                <p>Saving both your time and money! Because your satisfaction is everything. We are providing the best tools for hire. You can also share your unused tools here!</p>
+                                <p>Giving you the best and memorable tour with your loved ones ! Making great memories throughout the whole tour ! Because your satisfaction is everything to us !
+See our packages down bellow !</p>
                             </div>
                             <div>
                                 <div>
