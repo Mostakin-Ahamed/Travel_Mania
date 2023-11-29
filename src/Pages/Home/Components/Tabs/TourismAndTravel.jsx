@@ -1,6 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+
+// 
+
+import 'swiper/css/navigation';
+import { Pagination, Navigation } from 'swiper/modules';
 
 
 // Import Swiper React components
@@ -10,15 +15,21 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { Pagination } from 'swiper/modules';
 import useTourTypes from '../../../../Hooks/useTourTypes';
 import TourCard from '../../../../Components/TourCard';
 import { Link } from 'react-router-dom';
+
 
 const TourismAndTravel = () => {
     const [tabIndex, setTabIndex] = useState(0)
     const [tour] = useTourTypes()
     const packages = tour.slice(0, 3);
+    const [guides, setGuides] = useState([])
+    useEffect(() => {
+        fetch('/Guides.json')
+            .then(res => res.json())
+            .then(data => setGuides(data))
+    })
     return (
         <div>
             <div className=' mx-auto lg:w-10/12  justify-center mb-16 '>
@@ -54,9 +65,37 @@ const TourismAndTravel = () => {
                             <Link to={'/allTours'}><button className='btn btn-outline '>All Packages</button></Link>
                         </div>
                     </TabPanel>
-                    <TabPanel></TabPanel>
+                    <TabPanel>
+                        <Swiper
+                            slidesPerView={1}
+                            spaceBetween={30}
+                            loop={true}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            navigation={true}
+                            modules={[Pagination, Navigation]}
+                            className="mySwiper"
+                        >
+
+                            {
+                                guides.map(guide => <SwiperSlide key={guide.guide_id} >
+                                    <div className="hero min-h-screen bg-base-200">
+                                        <div className="hero-content flex-col lg:flex-row">
+                                            <img src={guide.photo} className="max-w-sm rounded-lg shadow-2xl" />
+                                            <div>
+                                                <h1 className="text-5xl font-bold">Box Office News!</h1>
+                                                <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                                                <button className="btn btn-primary">Get Started</button>
+                                            </div>
+                                        </div>
+                                    </div></SwiperSlide>)
+                            }
+                        </Swiper>
+
+                    </TabPanel>
                 </Tabs>
-                
+
             </div>
             <hr className='border-dashed border-gray-400' />
         </div>

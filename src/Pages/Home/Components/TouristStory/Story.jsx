@@ -17,7 +17,8 @@ const Story = () => {
 
 
     return (
-        <div>
+        <div className='mt-10'>
+            <h1 className='text-5xl font-extrabold text-slate-500 text-center'>User Reviews</h1>
             <Swiper
                 slidesPerView={1}
                 spaceBetween={30}

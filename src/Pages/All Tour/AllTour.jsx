@@ -1,8 +1,15 @@
+import TourCard from "../../Components/TourCard";
+import useTourTypes from "../../Hooks/useTourTypes";
 
 const AllTour = () => {
+    const [tour]= useTourTypes()
     return (
         <div>
-            <h2>This is all tour page</h2>
+            <div className="grid grid-cols-3 gap-10 justify-evenly pb-10 mt-10 h-full ">
+            {
+                tour.map(item=> <TourCard key={item.service_id} item={item}></TourCard>)
+            }
+        </div>
         </div>
     );
 };
