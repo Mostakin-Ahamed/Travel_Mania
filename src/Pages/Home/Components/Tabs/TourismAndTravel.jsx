@@ -59,7 +59,7 @@ const TourismAndTravel = () => {
                     <TabPanel>
                         <div className='grid grid-cols-3 gap-10'>
                             {
-                                packages.map(item => <TourCard key={item.service_id} item={item}></TourCard>)
+                                packages.map(item => <TourCard key={item._id} item={item}></TourCard>)
                             }
                         </div>
                         <div className='flex justify-center mb-5'>

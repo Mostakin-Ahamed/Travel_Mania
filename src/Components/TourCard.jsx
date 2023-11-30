@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 // eslint-disable-next-line react/prop-types
 const TourCard = ({item}) => {
 
     const {
         // eslint-disable-next-line react/prop-types
-        service_name,description,price,duration_hours,tour_type, image} = item;
+        _id,service_name,description,price,duration_hours,tour_type, image} = item;
 
     return (
         <div className="max-h-[650px] pl-32 mb-10">
@@ -18,7 +20,7 @@ const TourCard = ({item}) => {
                     <h2 className="card-title">Duration Hours: {duration_hours}</h2>
                     <p>{description}</p>
                     <div className="card-actions">
-                        <button className="btn btn-primary">Book now!</button>
+                        <Link to={`/details/${_id}`}><button className="btn btn-primary">Show Details!</button></Link>
                     </div>
                 </div>
             </div>

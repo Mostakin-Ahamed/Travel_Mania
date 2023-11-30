@@ -32,7 +32,7 @@ const Story = () => {
             >
 
                 {
-                    reviews.map(review => <SwiperSlide key={review.user_id} >
+                    reviews.map(review => <SwiperSlide key={review._id} >
                         <div className='flex justify-center'>
                             <div className='text-center'>
                                 <p className='mb-5 text-lg' >{review.comment}</p>

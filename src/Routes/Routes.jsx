@@ -16,6 +16,9 @@ import AirRides from "../Pages/Tour Pages/Air Rides/AirRides";
 import Sports from "../Pages/Tour Pages/Sports/Sports";
 import AllTour from "../Pages/All Tour/AllTour";
 
+import ServiceDetail from "../Pages/Service Details/ServiceDetail";
+import PrivateRoute from "./PrivateRoute";
+
 
   export const router = createBrowserRouter([
     {
@@ -77,6 +80,11 @@ import AllTour from "../Pages/All Tour/AllTour";
         {
           path:'/allTours',
           element:<AllTour></AllTour>
+        },
+        {
+          path:`/details/:id`,
+          element:<PrivateRoute><ServiceDetail></ServiceDetail></PrivateRoute>,
+          loader: ({params})=> fetch(`http://localhost:5000/details/${params.id}`)
         }
         
 

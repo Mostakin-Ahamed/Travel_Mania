@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useTourGuides = () => {
-    const [guide, setGuide] = useState([]);
+    const [guides, setGuide] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         fetch('http://localhost:5000/allGuides')
@@ -12,6 +12,6 @@ const useTourGuides = () => {
             });
             
     }, [])
-    return [guide, loading]
+    return [guides, loading]
 }
 export default useTourGuides;
