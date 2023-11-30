@@ -58,7 +58,7 @@ const TourCard = ({ item }) => {
     }
 
     return (
-        <div className="max-h-[650px] pl-32 mb-10">
+        <div className="max-h-[650px] pl-5 md:pl-12 lg:pl-10 mb-10">
             <div className="card w-96 h-full bg-base-100 shadow-xl">
                 <figure className=" px-10 pt-10">
                     <img src={image} alt="Shoes" className="rounded-xl object-fill h-[200px]" />

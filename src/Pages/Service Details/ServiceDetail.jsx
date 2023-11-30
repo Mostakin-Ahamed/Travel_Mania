@@ -18,68 +18,47 @@ const ServiceDetail = () => {
 
     const { user } = useContext(AuthContext)
     const [guides] = useTourGuides()
-    const formRef=useRef();
-    const { _id,image, description, price, duration_hours, service_name } = tour;
+    const formRef = useRef();
+    const { _id, image, description, price, duration_hours, service_name } = tour;
     const axiosSecure = useAxiosSecure()
 
     const bookItem = e => {
         e.preventDefault();
         console.log(tour.image);
-        const form =e.target;
+        const form = e.target;
         const email = user.email;
         const tourId = _id;
         console.log(tourId);
         const tourImage = image;
         console.log(tourImage);
-        const tourDescription =description;
-        const tourPrice =price;
+        const tourDescription = description;
+        const tourPrice = price;
         const tourDuration = duration_hours;
         const guideName = form.guideName.value;
         const tourDate = form.date.value;
         const tourName = service_name;
-        const bookedTour = {email, tourId, tourImage, tourDescription, tourPrice, tourDuration ,tourName, guideName, tourDate};
+        const bookedTour = { email, tourId, tourImage, tourDescription, tourPrice, tourDuration, tourName, guideName, tourDate };
         console.log(bookedTour);
 
-        axiosSecure.post('/bookTour',bookedTour)
-        .then(res =>{
-            console.log(res.data);
-            if(res.data.insertedId){
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'Service added to cart!',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                })
-                formRef.current?.reset();
-            }
-        })
+        axiosSecure.post('/bookTour', bookedTour)
+            .then(res => {
+                console.log(res.data);
+                if (res.data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Service added to cart!',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                    formRef.current?.reset();
+                }
+            })
 
-        // fetch('http://localhost:5000/bookTour', {
-            
-        //         method: 'POST',
-        //         headers:{
-        //             'content-type': 'application/json'
-        //         },
-        //         body: JSON.stringify(bookedTour)
-    
-        //     })
-        //     .then(res => res.json())
-        //     .then(data =>{
-        //         if(data.insertedId){
-        //             Swal.fire({
-        //                 title: 'Success!',
-        //                 text: 'Service added to cart!',
-        //                 icon: 'success',
-        //                 confirmButtonText: 'Cool'
-        //             })
-        //             formRef.current?.reset();
-        //         }
-        //     })
 
 
     }
 
-    
+
     return (
         <div>
             <div className=" min-h-[700px] flex justify-center mt-28 mb-10">
@@ -89,15 +68,17 @@ const ServiceDetail = () => {
                     <SwiperSlide><img className="w-full object-cover" src={image} alt="" /></SwiperSlide>
                 </Swiper>
             </div>
-            <div >
-                <div className="flex-col justify-center">
-                    <h1 className="text-3xl font-bold">Name: {description}</h1>
+            <div className=" mb-10 ">
+                <div className="flex-col justify-center text-center">
+                    <h1 className="text-3xl font-bold">Name: {service_name}</h1>
+                    <h1 className="text-2xl font-bold">Detail: {description}</h1>
                     <h1 className="text-2xl font-bold">Price: ${price}/hour</h1>
                     <p className="py-6 text-lg">Total Duration:  {duration_hours}</p>
+
                 </div>
-                {/* <button onClick={() => bookItem(tour)} className="btn btn-primary">Book Now!</button> */}
-                {/* modal */}
-                <button className="btn btn-warning" onClick={() => document.getElementById('my_modal_5').showModal()}>Book This Service</button>
+                <div className="flex justify-center">
+                    <button className="btn btn-warning" onClick={() => document.getElementById('my_modal_5').showModal()}>Book This Service</button>
+                </div>
                 <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                     <div className="modal-box">
                         <div className="py-4">
@@ -144,9 +125,9 @@ const ServiceDetail = () => {
                                     <select name="guideName" className="select select-bordered w-full form-control" required>
                                         <option disabled selected>Select Guide</option>
                                         {
-                                            guides.map(guide=><option key={guide._id}>{guide.name}</option>)
+                                            guides.map(guide => <option key={guide._id}>{guide.name}</option>)
                                         }
-                                        
+
                                     </select>
                                 </div>
                                 <div className="form-control">
@@ -157,7 +138,7 @@ const ServiceDetail = () => {
                                         defaultValue={price} readOnly
                                         className="input input-bordered" />
                                 </div>
-                                <button className=" w-10/12 mt-4 btn font-medium ">Book This Item </button>
+                                <button className="bg-orange-400 w-full mx-auto mt-4 btn font-bold ">Book This Item </button>
                             </form>
                         </div>
                         <div className="modal-action ">

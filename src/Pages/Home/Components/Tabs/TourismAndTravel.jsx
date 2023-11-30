@@ -57,7 +57,7 @@ const TourismAndTravel = () => {
                         </Swiper>
                     </TabPanel>
                     <TabPanel>
-                        <div className='grid grid-cols-3 gap-10'>
+                        <div className='border border-black grid md:grid-cols-1 grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-10'>
                             {
                                 packages.map(item => <TourCard key={item._id} item={item}></TourCard>)
                             }
