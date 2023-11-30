@@ -9,6 +9,7 @@ import { useContext, useRef } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import useTourGuides from "../../Hooks/useTourGuides";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
 
 const ServiceDetail = () => {
@@ -19,6 +20,7 @@ const ServiceDetail = () => {
     const [guides] = useTourGuides()
     const formRef=useRef();
     const { _id,image, description, price, duration_hours, service_name } = tour;
+    const axiosSecure = useAxiosSecure()
 
     const bookItem = e => {
         e.preventDefault();
@@ -34,30 +36,45 @@ const ServiceDetail = () => {
         const tourDuration = duration_hours;
         const guideName = form.guideName.value;
         const tourDate = form.date.value;
-        const bookedTour = {email, tourId, tourImage, tourDescription, tourPrice, tourDuration , guideName, tourDate};
+        const tourName = service_name;
+        const bookedTour = {email, tourId, tourImage, tourDescription, tourPrice, tourDuration ,tourName, guideName, tourDate};
         console.log(bookedTour);
 
-        fetch('http://localhost:5000/bookTour', {
+        axiosSecure.post('/bookTour',bookedTour)
+        .then(res =>{
+            console.log(res.data);
+            if(res.data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Service added to cart!',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                })
+                formRef.current?.reset();
+            }
+        })
+
+        // fetch('http://localhost:5000/bookTour', {
             
-                method: 'POST',
-                headers:{
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(bookedTour)
+        //         method: 'POST',
+        //         headers:{
+        //             'content-type': 'application/json'
+        //         },
+        //         body: JSON.stringify(bookedTour)
     
-            })
-            .then(res => res.json())
-            .then(data =>{
-                if(data.insertedId){
-                    Swal.fire({
-                        title: 'Success!',
-                        text: 'Service added to cart!',
-                        icon: 'success',
-                        confirmButtonText: 'Cool'
-                    })
-                    formRef.current?.reset();
-                }
-            })
+        //     })
+        //     .then(res => res.json())
+        //     .then(data =>{
+        //         if(data.insertedId){
+        //             Swal.fire({
+        //                 title: 'Success!',
+        //                 text: 'Service added to cart!',
+        //                 icon: 'success',
+        //                 confirmButtonText: 'Cool'
+        //             })
+        //             formRef.current?.reset();
+        //         }
+        //     })
 
 
     }
@@ -65,7 +82,7 @@ const ServiceDetail = () => {
     
     return (
         <div>
-            <div className=" min-h-screen flex justify-center mb-10">
+            <div className=" min-h-[700px] flex justify-center mt-28 mb-10">
                 <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
                     <SwiperSlide><img className="w-full object-cover" src={image} alt="" /></SwiperSlide>
                     <SwiperSlide><img className="w-full object-cover" src={image} alt="" /></SwiperSlide>

@@ -18,6 +18,13 @@ import AllTour from "../Pages/All Tour/AllTour";
 
 import ServiceDetail from "../Pages/Service Details/ServiceDetail";
 import PrivateRoute from "./PrivateRoute";
+import Dashboard from "../Layout/Dashboard";
+import MyProfile from "../Pages/Dashboard/User Dashboard/My Profile/MyProfile";
+import MyBookings from "../Pages/Dashboard/User Dashboard/My Bookings/MyBookings";
+import MyWishlist from "../Pages/Dashboard/User Dashboard/MyWishlist/MyWishlist";
+import ManageUsers from "../Pages/Dashboard/Admin Dashboard/ManageUsers";
+import AddTour from "../Pages/Dashboard/Admin Dashboard/AddTour"
+import GuideAssignedTour from "../Pages/Dashboard/Guide Tour/GuideAssignedTour";
 
 
   export const router = createBrowserRouter([
@@ -90,4 +97,34 @@ import PrivateRoute from "./PrivateRoute";
 
       ]
     },
+    {
+      path:'dashboard',
+      element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+      children:[
+        {
+          path: 'profile',
+          element:<MyProfile></MyProfile>
+        },
+        {
+          path: 'myBookings',
+          element:<MyBookings></MyBookings>
+        },
+        {
+          path: 'myWishlist',
+          element:<MyWishlist></MyWishlist>
+        },
+        {
+          path: 'admin/manageUsers',
+          element:<ManageUsers></ManageUsers>
+        },
+        {
+          path: 'admin/addTour',
+          element:<AddTour></AddTour>
+        },
+        {
+          path:'myAssignedTour',
+          element:<GuideAssignedTour></GuideAssignedTour>
+        }
+      ]
+    }
   ]);

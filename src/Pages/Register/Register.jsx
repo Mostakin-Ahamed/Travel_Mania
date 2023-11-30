@@ -6,13 +6,15 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 const Register = () => {
 
-    
+
     const { createUser, googleRegister } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+    const axiosPublic = useAxiosPublic();
 
     const handleRegister = e => {
         e.preventDefault();
@@ -22,60 +24,68 @@ const Register = () => {
         const password = form.get('password');
         const name = form.get('name');
         const photo = form.get('photoURL');
-        
-        if(password.length<6){
+        const role = 'user'
+
+        if (password.length < 6) {
             Swal.fire({
                 title: 'Error!',
                 text: 'Password must be 6 characters or longer!',
                 icon: 'error',
                 confirmButtonText: 'Cool'
-              })
+            })
             return;
         }
-        else if(!/[A-Z]/.test(password)){
+        else if (!/[A-Z]/.test(password)) {
             Swal.fire({
                 title: 'Error!',
                 text: 'Password must be 6 characters or longer!',
                 icon: 'error',
                 confirmButtonText: 'Cool'
-              })
+            })
             return;
         }
 
         createUser(email, password)
             .then(result => {
-                console.log(result.user);
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'User created successfully!',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                  })
-                updateProfile(result.user, {
-                    displayName: name,
-                    photoURL:photo
-                })
-                .then(()=>console.log("profile updated"))
-                .catch()
-                
-                
-                navigate(location?.state? location.state : '/')
+                const userInfo = { email, name, photo , role}
+                axiosPublic.post('/users', userInfo)
+                    .then(res => {
+                        if (res.data.insertedId) {
+                            console.log(result.user);
+                            Swal.fire({
+                                title: 'Success!',
+                                text: 'User created successfully!',
+                                icon: 'success',
+                                confirmButtonText: 'Cool'
+                            })
+                            updateProfile(result.user, {
+                                displayName: name,
+                                photoURL: photo
+                            })
+                                .then(() => console.log("profile updated"))
+                                .catch()
+
+
+                            navigate(location?.state ? location.state : '/')
+                        }
+                    })
+
             })
-            
+
             .catch(error => {
 
-                 Swal.fire({
+                Swal.fire({
                     title: 'Error!',
                     text: error.message,
                     icon: 'error',
                     confirmButtonText: 'Cool'
-                  })
+                })
             })
     }
-    const handleGoogleRegister = e =>{
+    const handleGoogleRegister = e => {
         e.preventDefault();
         googleRegister();
-        navigate(location?.state? location.state : '/')
+        navigate(location?.state ? location.state : '/')
 
     }
 

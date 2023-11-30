@@ -27,8 +27,9 @@ const TourCard = ({ item }) => {
         const tourDescription = description;
         const tourPrice = price;
         const tourDuration = duration_hours;
+        const tourName = service_name;
         
-        const wishList = { email, tourId, tourImage, tourDescription, tourPrice, tourDuration};
+        const wishList = { email, tourId, tourImage, tourDescription,tourName , tourPrice, tourDuration};
         console.log(wishList);
 
         fetch('http://localhost:5000/wishList', {

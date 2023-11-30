@@ -74,9 +74,9 @@ const Navbar = () => {
                               <li className="pl-3 py-1">
                                User Email:  {user.email}
                               </li>
-                              <li>
+                              <Link to={'/dashboard/profile'}><li>
                                 <a>Dashboard</a>
-                              </li>
+                              </li></Link>
                               <li><button onClick={handleSignOut}> Log Out</button></li>
                             </ul>
                           </div>
