@@ -26,7 +26,7 @@ const TourismAndTravel = () => {
     const packages = tour.slice(0, 3);
     const [guides, setGuides] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/allGuides')
+        fetch('https://travel-mania-server.vercel.app/allGuides')
             .then(res => res.json())
             .then(data => setGuides(data))
 
@@ -57,7 +57,7 @@ const TourismAndTravel = () => {
                         </Swiper>
                     </TabPanel>
                     <TabPanel>
-                        <div className='border border-black grid md:grid-cols-1 grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-10'>
+                        <div className=' grid md:grid-cols-1 grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-10'>
                             {
                                 packages.map(item => <TourCard key={item._id} item={item}></TourCard>)
                             }

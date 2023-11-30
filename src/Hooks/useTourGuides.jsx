@@ -4,7 +4,7 @@ const useTourGuides = () => {
     const [guides, setGuide] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:5000/allGuides')
+        fetch('https://travel-mania-server.vercel.app/allGuides')
             .then(res => res.json())
             .then(data => {
                 setGuide(data)

@@ -77,7 +77,7 @@ const ServiceDetail = () => {
 
                 </div>
                 <div className="flex justify-center">
-                    <button className="btn btn-warning" onClick={() => document.getElementById('my_modal_5').showModal()}>Book This Service</button>
+                    <button className="btn btn-warning w-1/2 mx-auto" onClick={() => document.getElementById('my_modal_5').showModal()}>Book This Tour</button>
                 </div>
                 <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                     <div className="modal-box">

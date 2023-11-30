@@ -32,7 +32,7 @@ const TourCard = ({ item }) => {
         const wishList = { email, tourId, tourImage, tourDescription,tourName , tourPrice, tourDuration};
         console.log(wishList);
 
-        fetch('http://localhost:5000/wishList', {
+        fetch('https://travel-mania-server.vercel.app/wishList', {
 
                 method: 'POST',
                 headers:{

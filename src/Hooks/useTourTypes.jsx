@@ -4,7 +4,7 @@ const useTourTypes = () => {
     const [tour, setTour] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:5000/allTours')
+        fetch('https://travel-mania-server.vercel.app/allTours')
             .then(res => res.json())
             .then(data => {
                 setTour(data)

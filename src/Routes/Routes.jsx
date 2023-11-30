@@ -91,7 +91,7 @@ import GuideAssignedTour from "../Pages/Dashboard/Guide Tour/GuideAssignedTour";
         {
           path:`/details/:id`,
           element:<PrivateRoute><ServiceDetail></ServiceDetail></PrivateRoute>,
-          loader: ({params})=> fetch(`http://localhost:5000/details/${params.id}`)
+          loader: ({params})=> fetch(`https://travel-mania-server.vercel.app/details/${params.id}`)
         }
         
 
