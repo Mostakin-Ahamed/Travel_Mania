@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 
 import { AuthContext } from "../../../../Provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 const MyBookings = () => {
@@ -20,6 +21,7 @@ const MyBookings = () => {
 
     return (
         <div className="w-10/12 mx-auto mt-20">
+            <Helmet><title>My Bookings</title></Helmet>
             <div className="overflow-x-auto">
 
                 <div className="flex justify-around">

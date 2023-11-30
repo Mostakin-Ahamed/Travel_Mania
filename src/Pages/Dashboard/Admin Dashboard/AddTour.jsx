@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 // import Swal from 'sweetalert2'
 
 const AddProducts = () => {
@@ -42,6 +43,7 @@ const AddProducts = () => {
 
     return (
         <div className="mb-48">
+            <Helmet><title>Admin Dashboard</title></Helmet>
             <h2 className="text-3xl my-10 text-center">Add a new tour!</h2>
             <form ref={formRef} onSubmit={handleNewProduct} className="w-1/2 lg:w-1/2 md:3/4 mx-auto">
                 <div className="form-control">

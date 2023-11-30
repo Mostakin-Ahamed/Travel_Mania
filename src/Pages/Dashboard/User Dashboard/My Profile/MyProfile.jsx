@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../../Provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -8,7 +9,7 @@ const MyProfile = () => {
     const {user}= useContext(AuthContext)
     return (
         <div>
-            
+            <Helmet><title>My Profile</title></Helmet>
             <div className="hero min-h-full pt-32">
                 <div className="hero-content flex-col lg:flex-row">
                     {/* <img src={guide.photo} className="max-w-sm object-cover avatar shadow-2xl mr-8" /> */}

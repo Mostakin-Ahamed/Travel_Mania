@@ -1,4 +1,5 @@
 
+import { Helmet } from 'react-helmet-async';
 import TourCard from '../../../Components/TourCard';
 import useTourTypes from '../../../Hooks/useTourTypes';
 
@@ -9,6 +10,7 @@ const Walking = () => {
 
     return (
         <div className="grid grid-cols-3 gap-10 justify-evenly mb-8  pb-10 mt-10 h-full ">
+            <Helmet><title>Walking</title></Helmet>
             {
                 walking.map(item=> <TourCard key={item.service_id} item={item}></TourCard>)
             }

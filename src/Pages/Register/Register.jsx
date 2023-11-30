@@ -7,6 +7,7 @@ import { updateProfile } from "firebase/auth";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 
@@ -91,6 +92,7 @@ const Register = () => {
 
     return (
         <div className="mb-32">
+            <Helmet><title>Sign Up!</title></Helmet>
             <div >
                 <h2 className="text-3xl my-10 text-center">Please Register!</h2>
                 <form onSubmit={handleRegister} className="w-1/2 lg:w-1/2 md:3/4 mx-auto">

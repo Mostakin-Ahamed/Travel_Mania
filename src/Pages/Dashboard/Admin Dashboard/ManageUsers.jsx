@@ -4,6 +4,7 @@ import { FaTrash, FaUser } from "react-icons/fa";
 import Swal from "sweetalert2";
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
 import { FaUserCheck } from "react-icons/fa6";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -134,6 +135,7 @@ const ManageUsers = () => {
     }
     return (
         <div>
+            <Helmet><title>Manage User</title></Helmet>
             <div className="flex justify-evenly my-4">
                 <h2 className="text-3xl">All Users</h2>
                 <h2 className="text-3xl">Total Users: {users.length}</h2>

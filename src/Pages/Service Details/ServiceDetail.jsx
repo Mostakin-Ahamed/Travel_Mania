@@ -10,6 +10,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import useTourGuides from "../../Hooks/useTourGuides";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 
 const ServiceDetail = () => {
@@ -61,6 +62,7 @@ const ServiceDetail = () => {
 
     return (
         <div>
+            <Helmet><title>{service_name}</title></Helmet>
             <div className=" min-h-[700px] flex justify-center mt-28 mb-10">
                 <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
                     <SwiperSlide><img className="w-full object-cover" src={image} alt="" /></SwiperSlide>

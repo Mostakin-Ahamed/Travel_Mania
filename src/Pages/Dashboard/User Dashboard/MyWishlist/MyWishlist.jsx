@@ -5,6 +5,7 @@ import { FaTrash } from "react-icons/fa";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure";
 import useCart from "../../../../Hooks/useCart";
+import { Helmet } from "react-helmet-async";
 
 
 const MyWishlist = () => {
@@ -45,6 +46,7 @@ const MyWishlist = () => {
 
     return (
         <div className="w-10/12 mx-auto mt-20">
+            <Helmet><title>My Wishlist</title></Helmet>
             <div className="overflow-x-auto">
 
 

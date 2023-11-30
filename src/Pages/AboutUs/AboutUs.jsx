@@ -1,9 +1,11 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 
 const AboutUs = () => {
     return (
         <div className="mb-8">
+            <Helmet><title>About Us</title></Helmet>
             <div className='mt-16 '>
                 <div className=" text-center mb-10" id='header-text'>
                     <p>About Us!</p>

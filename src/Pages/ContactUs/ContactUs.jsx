@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Helmet } from "react-helmet-async";
 
 import Swal from "sweetalert2";
 
@@ -50,6 +51,7 @@ const ContactUs = () => {
 
     return (
         <div>
+            <Helmet><title>Contact Us</title></Helmet>
             <div className="mb-48">
                 <div>
                     <h2 className="text-3xl my-10 text-center">Contact Us!</h2>
