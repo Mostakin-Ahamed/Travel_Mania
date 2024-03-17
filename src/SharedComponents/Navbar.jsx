@@ -21,7 +21,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="bg-inherit lg:w-10/12 mx-auto">
+            <div className=" bg-inherit lg:w-10/12 mx-auto">
                 <div className="navbar ">
                     <div className="navbar-start">
                         <div className="dropdown">

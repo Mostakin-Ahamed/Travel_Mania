@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 import { FaRegHeart } from "react-icons/fa";
+import { CiLocationOn } from "react-icons/ci";
+import { FaRegClock } from "react-icons/fa6";
 
 import { useContext, useRef } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
@@ -60,20 +62,24 @@ const TourCard = ({ item }) => {
 
     return (
         <div className="max-h-[650px] pl-5 md:pl-12 lg:pl-10 mb-10">
-            <div className="card w-96 h-full bg-base-100 shadow-xl">
-                <figure className=" px-10 pt-10">
-                    <img src={image} alt="Shoes" className="rounded-xl object-fill h-[200px]" />
-
+            <div className="card w-96 h-full bg-inherit rounded-none  ">
+                <figure className="">
+                    <img src={image} alt="Image" className="  object-contain h-[250px]" />
                 </figure>
-                <div className="card-body items-center text-center">
-                    <h2></h2>
-                    <h2 className="card-title">Service Name: {service_name}</h2>
-                    <h2 className="card-title">Service Type: {tour_type}</h2>
-                    <h2 className="card-title">Price: ${price}</h2>
-                    <h2 className="card-title">Duration Hours: {duration_hours}</h2>
-                    <p>{description}</p>
-                    <div className="card-actions">
-                        <Link to={`/details/${_id}`}><button className="btn btn-primary bg-blue-600">Show Details!</button></Link>
+                <div className="card-body items-start text-center">
+                    <h3 className="flex gap-3"> <CiLocationOn />{tour_type} </h3>
+                    <h2 className="text-2xl"> {service_name}</h2>
+                    <div className="flex w-9/12 justify-between">
+                        <div className="">
+                            <h2 className="text-lg text-gray-700">From <span className="text-xl font-semibold text-orange-600"> $: {price}</span> </h2>
+                        </div>
+                        <div className="">
+                            <h2 className="card-title"><FaRegClock></FaRegClock> {duration_hours}</h2>
+                        </div>
+                    </div>
+                    <hr />
+                    <div className="flex justify-between w-9/12">
+                        <Link to={`/details/${_id}`}><button className="btn btn-primary border-none bg-blue-600">Show Details!</button></Link>
                         <button onClick={addToWishlist} className="btn btn-ghost "><FaRegHeart /></button>
                     </div>
                 </div>
