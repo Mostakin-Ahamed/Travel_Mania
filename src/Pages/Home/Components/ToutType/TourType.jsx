@@ -19,8 +19,8 @@ const TourType = () => {
 
     return (
         <div className='mt-10'>
-            <div>
-                <h1 className='text-5xl font-extrabold text-slate-500 text-center'>Tour Types</h1>
+            <div className="font-bold text-5xl text-center mb-16 ">
+                <p>Tour <span className="text-blue-500"> Types</span> </p>
             </div>
             <Swiper
                 effect={'coverflow'}
@@ -40,25 +40,25 @@ const TourType = () => {
             >
                 <SwiperSlide>
                     <Link to={'/tours/wildlife'}><img className='w-full h-full object-cover' src="/wildlife.jpg" />
-                    <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Wildlife</h2></Link>
+                        <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Wildlife</h2></Link>
                 </SwiperSlide>
                 <SwiperSlide>
                     <Link to={'/tours/sports'}><img className='h-full object-cover' src="/sports.jpeg" />
-                    <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Sports</h2></Link>
+                        <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Sports</h2></Link>
                 </SwiperSlide>
                 <SwiperSlide>
                     <Link to={'/tours/hiking'}><img className='h-full object-cover' src="/hiking.jpg" />
-                    <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Hiking</h2></Link>
+                        <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Hiking</h2></Link>
                 </SwiperSlide>
                 <SwiperSlide>
                     <Link to={'/tours/walking'}><img className='h-full object-cover' src="/walking.jpg" />
-                    <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Walking</h2></Link>
+                        <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Walking</h2></Link>
                 </SwiperSlide>
                 <SwiperSlide>
                     <Link to={'/tours/airRides'}><img className='h-full object-cover' src="/air-rides.jpg" />
-                    <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Air Rides</h2></Link>
+                        <h2 className='font-bold text-3xl text-white absolute -mt-16 ml-3'>Air Rides</h2></Link>
                 </SwiperSlide>
-                
+
             </Swiper>
             <hr className='border-dashed border-gray-400' />
         </div>

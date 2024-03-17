@@ -25,7 +25,7 @@ const Banner = () => {
                             </div>
                             <div className='w-[358px] mt-8 text-justify'>
                                 <p>Giving you the best and memorable tour with your loved ones ! Making great memories throughout the whole tour ! Because your satisfaction is everything to us !
-See our packages down bellow !</p>
+                                    See our packages down bellow !</p>
                             </div>
                             <div>
                                 <div>
@@ -36,9 +36,7 @@ See our packages down bellow !</p>
                                     <img src="/Union.svg" className='static ml-[315px] lg:ml-96 -mt-7 mb-7' alt="" />
                                 </div>
                             </div>
-                            <div className=''>
-                                <img src="/Icon.svg" className='mt-20 hidden lg:block' alt="" />
-                            </div>
+                            
                         </div>
                     </div>
                     <div className='pr-10 lg:mr-60'>
@@ -46,9 +44,9 @@ See our packages down bellow !</p>
                         <img className='absolute ml-44 -mt-64 lg:ml-80 lg:-mt-[350px]' src="/Play video.svg" alt="" />
                     </div>
                 </div>
-                
+
             </div>
-            
+
         </div>
     );
 };

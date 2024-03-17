@@ -15,8 +15,6 @@ const Navbar = () => {
 
     const navLinks = <>
         <li><NavLink className="mx-3" to='/'>Home</NavLink></li>
-        <li><NavLink className="mx-3" to='/community'>Community</NavLink></li>
-        <li><NavLink className="mx-3" to='/blogs'>Blogs</NavLink></li>
         <li><NavLink className="mx-3" to='/aboutUs'>About Us</NavLink></li>
         <li><NavLink className="mx-3" to='/contactUs'>Contact Us</NavLink></li>
     </>
@@ -35,13 +33,13 @@ const Navbar = () => {
                                     navLinks
                                 }
                                 {
-                                    user ?<></> : <li><NavLink className="mx-3" to='/login'>Login</NavLink></li>
+                                    user ? <></> : <li><NavLink className="mx-3" to='/login'>Login</NavLink></li>
                                 }
 
                             </ul>
                         </div>
                         <div className="lg:flex md:flex"><img className="h-[35px] ml-3 pl-r" src="/icon.svg" alt="" />
-                        <Link to="/"><a className="btn btn-ghost normal-case text-xl">Travel Mania</a></Link></div>
+                            <Link to="/"><a className="btn btn-ghost normal-case text-xl">Travel Mania</a></Link></div>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
@@ -49,7 +47,7 @@ const Navbar = () => {
                                 navLinks
                             }
                             {
-                                user ?<></>:
+                                user ? <></> :
                                     <li><NavLink className="mx-3" to='/login'>Login</NavLink></li>
                             }
 
@@ -62,26 +60,20 @@ const Navbar = () => {
                         }
                         {
                             user && <div className="dropdown dropdown-end">
-                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                              <div className="w-10 rounded-full">
-                                <img src={user.photoURL} />
-                              </div>
+                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img src={user.photoURL} />
+                                    </div>
+                                </div>
+                                <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                    <Link to={'/dashboard/profile'}><li>
+                                        <a>Dashboard</a>
+                                    </li></Link>
+                                    <li><button onClick={handleSignOut}> Log Out</button></li>
+                                </ul>
                             </div>
-                            <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li className="pl-3 py-1">
-                                User Name: {user.displayName}
-                              </li>
-                              <li className="pl-3 py-1">
-                               User Email:  {user.email}
-                              </li>
-                              <Link to={'/dashboard/profile'}><li>
-                                <a>Dashboard</a>
-                              </li></Link>
-                              <li><button onClick={handleSignOut}> Log Out</button></li>
-                            </ul>
-                          </div>
                         }
-                        
+
 
                     </div>
                 </div>

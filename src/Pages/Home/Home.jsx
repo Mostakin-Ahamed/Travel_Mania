@@ -3,6 +3,8 @@ import Banner from "./Components/Banner/Banner";
 import TourismAndTravel from "./Components/Tabs/TourismAndTravel";
 import Story from "./Components/TouristStory/Story";
 import TourType from "./Components/ToutType/TourType";
+import Offer from "./Components/Offer/Offer";
+import Destinations from "./Components/Destinations/Destinations";
 
 const Home = () => {
     return (
@@ -12,6 +14,8 @@ const Home = () => {
             </Helmet>
             <Banner></Banner>
             <TourismAndTravel></TourismAndTravel>
+            <Offer></Offer>
+            <Destinations></Destinations>
             <TourType></TourType>
             <Story></Story>
         </div>

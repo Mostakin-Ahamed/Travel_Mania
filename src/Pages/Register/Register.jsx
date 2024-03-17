@@ -1,8 +1,5 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-
-// import 'react-toastify/dist/ReactToastify.css';
-// import { FcGoogle } from 'react-icons/fc';
 import { updateProfile } from "firebase/auth";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";

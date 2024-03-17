@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet-async";
 const MyProfile = () => {
 
     const {user}= useContext(AuthContext)
+    console.log(user);
     return (
         <div>
             <Helmet><title>My Profile</title></Helmet>
@@ -21,7 +22,7 @@ const MyProfile = () => {
                     <div>
                         <h1 className="text-3xl font-bold">Name: {user.displayName}</h1>
                         <h1 className="text-2xl font-bold">Email: {user.email}</h1>
-                        <h1 className="text-xl font-bold">Phone: {user.uid}</h1>
+                        <h1 className="text-xl font-bold">Phone: {user.phone_number}</h1>
                     </div>
                 </div>
             </div>

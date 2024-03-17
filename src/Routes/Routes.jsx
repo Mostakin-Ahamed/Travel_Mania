@@ -5,9 +5,7 @@ import MainLayout from "../Layout/MainLayout";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
-import Community from "../Pages/Community/Community";
 import ContactUs from "../Pages/ContactUs/ContactUs";
-import Blogs from "../Pages/Blogs/Blogs";
 import AboutUs from "../Pages/AboutUs/AboutUs";
 import Wildlife from "../Pages/Tour Pages/Wildlife/Wildlife";
 import Walking from "../Pages/Tour Pages/Walking/Walking";
@@ -25,12 +23,14 @@ import MyWishlist from "../Pages/Dashboard/User Dashboard/MyWishlist/MyWishlist"
 import ManageUsers from "../Pages/Dashboard/Admin Dashboard/ManageUsers";
 import AddTour from "../Pages/Dashboard/Admin Dashboard/AddTour"
 import GuideAssignedTour from "../Pages/Dashboard/Guide Tour/GuideAssignedTour";
+import Error from "../Pages/ErrorPage/Error";
 
 
   export const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout></MainLayout>,
+      errorElement: <Error></Error>,
       children:[
         {
           path:'/',
@@ -45,16 +45,8 @@ import GuideAssignedTour from "../Pages/Dashboard/Guide Tour/GuideAssignedTour";
           element:<Register></Register>
         },
         {
-          path:'/community',
-          element:<Community></Community>
-        },
-        {
           path:'/contactUs',
           element:<ContactUs></ContactUs>
-        },
-        {
-          path:'/blogs',
-          element:<Blogs></Blogs>
         },
         {
           path:'/aboutUs',

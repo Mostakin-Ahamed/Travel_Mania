@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { FaHeart } from "react-icons/fa";
+
+import { FaRegHeart } from "react-icons/fa";
 
 import { useContext, useRef } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
@@ -20,7 +21,7 @@ const TourCard = ({ item }) => {
     const addToWishlist = e => {
         e.preventDefault();
         // const wishlist = { userEmail, item }
-        
+
         const email = user.email;
         const tourId = _id;
         const tourImage = image;
@@ -28,22 +29,22 @@ const TourCard = ({ item }) => {
         const tourPrice = price;
         const tourDuration = duration_hours;
         const tourName = service_name;
-        
-        const wishList = { email, tourId, tourImage, tourDescription,tourName , tourPrice, tourDuration};
+
+        const wishList = { email, tourId, tourImage, tourDescription, tourName, tourPrice, tourDuration };
         console.log(wishList);
 
         fetch('https://travel-mania-server.vercel.app/wishList', {
 
-                method: 'POST',
-                headers:{
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(wishList)
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(wishList)
 
-            })
+        })
             .then(res => res.json())
-            .then(data =>{
-                if(data.insertedId){
+            .then(data => {
+                if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
                         text: 'Tour added to WishList!',
@@ -65,14 +66,15 @@ const TourCard = ({ item }) => {
 
                 </figure>
                 <div className="card-body items-center text-center">
-                    <h2><button onClick={addToWishlist} className="btn-lg text-red-500"><FaHeart /></button></h2>
+                    <h2></h2>
                     <h2 className="card-title">Service Name: {service_name}</h2>
                     <h2 className="card-title">Service Type: {tour_type}</h2>
                     <h2 className="card-title">Price: ${price}</h2>
                     <h2 className="card-title">Duration Hours: {duration_hours}</h2>
                     <p>{description}</p>
                     <div className="card-actions">
-                        <Link to={`/details/${_id}`}><button className="btn btn-primary">Show Details!</button></Link>
+                        <Link to={`/details/${_id}`}><button className="btn btn-primary bg-blue-600">Show Details!</button></Link>
+                        <button onClick={addToWishlist} className="btn btn-ghost "><FaRegHeart /></button>
                     </div>
                 </div>
             </div>
