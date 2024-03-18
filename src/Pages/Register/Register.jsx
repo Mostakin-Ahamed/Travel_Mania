@@ -45,7 +45,7 @@ const Register = () => {
 
         createUser(email, password)
             .then(result => {
-                const userInfo = { email, name, photo , role}
+                const userInfo = { email, name, photo, role }
                 axiosPublic.post('/users', userInfo)
                     .then(res => {
                         if (res.data.insertedId) {
@@ -88,43 +88,51 @@ const Register = () => {
     }
 
     return (
-        <div className="mb-32">
+        <div className="mb-32 w-9/12 mx-auto">
             <Helmet><title>Sign Up!</title></Helmet>
-            <div >
-                <h2 className="text-3xl my-10 text-center">Please Register!</h2>
-                <form onSubmit={handleRegister} className="w-1/2 lg:w-1/2 md:3/4 mx-auto">
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Name</span>
-                        </label>
-                        <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
-                    </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Email</span>
-                        </label>
-                        <input type="email" name="email" placeholder="email" className="input input-bordered" required />
-                    </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Photo URL</span>
-                        </label>
-                        <input type="text" name="photoURL" placeholder="Photo URL" className="input input-bordered" required />
-                    </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Password</span>
-                        </label>
-                        <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
-                    </div>
-                    <div className="form-control mt-6">
-                        <button className="btn btn-primary">Register with email</button>
-                    </div>
-                </form>
-                <div className="flex justify-center w-full mt-6">
-                    <button onClick={handleGoogleRegister} className="btn btn-primary">Register with google <img className="h-[25px]" src="/google.svg" alt="" /></button>
+            <div className="flex  justify-center " >
+                <div className="flex  items-center  w-1/2 mx-auto">
+                    <img className="" src="https://i.ibb.co/sWmCYM3/registration.jpg" alt="" />
                 </div>
-                <p className="text-center mt-5">Already have an account? <Link className="text-blue-600" to="/login">Login Here! </Link></p>
+                <div className=" w-9/12 mx-auto " >
+
+                    <h2 className="text-3xl my-10 text-center">Please Register!</h2>
+                    <form onSubmit={handleRegister} className="w-1/2 lg:w-1/2 md:3/4 mx-auto">
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Name</span>
+                            </label>
+                            <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Email</span>
+                            </label>
+                            <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Photo URL</span>
+                            </label>
+                            <input type="text" name="photoURL" placeholder="Photo URL" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Password</span>
+                            </label>
+                            <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control mt-6">
+                            <button className="btn btn-primary">Register with email</button>
+                        </div>
+                    </form>
+                    <div className="flex justify-center items-center gap-5  w-1/2 mx-auto mt-6">
+                        <p className="text-lg">Register with google</p>
+                        <button onClick={handleGoogleRegister} className="btn btn-ghost"><img className="h-[25px]" src="/google.svg" alt="" /></button>
+                    </div>
+                    <p className="text-center mt-5">Already have an account? <Link className="text-blue-600" to="/login">Login Here! </Link></p>
+
+                </div>
             </div>
         </div>
     );

@@ -74,7 +74,7 @@ const TourCard = ({ item }) => {
                             <h2 className="text-lg text-gray-700">From <span className="text-xl font-semibold text-orange-600"> $: {price}</span> </h2>
                         </div>
                         <div className="">
-                            <h2 className="card-title"><FaRegClock></FaRegClock> {duration_hours}</h2>
+                            <h2 className="card-title"><FaRegClock></FaRegClock> {duration_hours} Hours</h2>
                         </div>
                     </div>
                     <div className="w-full gap-4 mb-3">
