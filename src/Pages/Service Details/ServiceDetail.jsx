@@ -63,7 +63,7 @@ const ServiceDetail = () => {
     return (
         <div>
             <Helmet><title>{service_name}</title></Helmet>
-            <div className=" min-h-[700px] flex justify-center mt-28 mb-10">
+            <div className=" min-h-[700px] flex justify-center mt-14 mb-10">
                 <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
                     <SwiperSlide><img className="w-full object-cover" src={image} alt="" /></SwiperSlide>
                     <SwiperSlide><img className="w-full object-cover" src={image} alt="" /></SwiperSlide>
@@ -79,10 +79,10 @@ const ServiceDetail = () => {
 
                 </div>
                 <div className="flex justify-center">
-                    <button className="btn btn-warning w-1/2 mx-auto" onClick={() => document.getElementById('my_modal_5').showModal()}>Book This Tour</button>
+                    <button className="btn bg-blue-500 w-1/2 mx-auto" onClick={() => document.getElementById('my_modal_5').showModal()}>Book This Tour</button>
                 </div>
-                <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-                    <div className="modal-box">
+                <dialog id="my_modal_5" className="modal w-full modal-bottom sm:modal-middle">
+                    <div className="modal-box w-8/12">
                         <div className="py-4">
                             <h3 className="font-bold text-lg text-center">{service_name}</h3>
                             <form onSubmit={bookItem} className="w-1/2 lg:w-10/12 md:3/4 mx-auto">
@@ -140,7 +140,7 @@ const ServiceDetail = () => {
                                         defaultValue={price} readOnly
                                         className="input input-bordered" />
                                 </div>
-                                <button className="bg-orange-400 w-full mx-auto mt-4 btn font-bold ">Book This Item </button>
+                                <button className="bg-blue-500 w-full mx-auto mt-4 btn font-bold ">Book This Item </button>
                             </form>
                         </div>
                         <div className="modal-action ">

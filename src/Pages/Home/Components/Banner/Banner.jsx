@@ -1,28 +1,14 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './Banner.css'
 const Banner = () => {
     return (
-        <div>
-            <div className='mt-16 pl-10 lg:ml-64'>
-
-                <div id='header-text'>
-                    <p>Giving you the best tours<br /> with your loved ones.</p>
-                </div>
+        <div className='w-full mb-10'>
+            {/* <div className='mt-16 pl-10 lg:ml-64'>
+                
                 <div className='lg:flex justify-between '>
                     <div>
                         <div className='mt-4'>
-                            <div>
-                                <div id='support-text' className='flex gap-8'>
-                                    <div className='flex justify-evenly'>
-                                        <img className='mr-3' src="/Group.svg" alt="" />
-                                        <p>24/7 Online Support</p>
-                                    </div>
-                                    <div className='flex justify-evenly'>
-                                        <img className='mr-3' src="/Group.svg" alt="" />
-                                        <p>Quick Communication</p>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <div className='w-[358px] mt-8 text-justify'>
                                 <p>Giving you the best and memorable tour with your loved ones ! Making great memories throughout the whole tour ! Because your satisfaction is everything to us !
                                     See our packages down bellow !</p>
@@ -45,7 +31,8 @@ const Banner = () => {
                     </div>
                 </div>
 
-            </div>
+            </div> */}
+            <img  src="https://i.ibb.co/K6KwWMv/6019681.jpg" alt="" />
 
         </div>
     );
