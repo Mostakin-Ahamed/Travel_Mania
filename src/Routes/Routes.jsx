@@ -46,7 +46,7 @@ import Error from "../Pages/ErrorPage/Error";
         },
         {
           path:'/contactUs',
-          element:<ContactUs></ContactUs>
+          element:<PrivateRoute><ContactUs></ContactUs></PrivateRoute>
         },
         {
           path:'/aboutUs',

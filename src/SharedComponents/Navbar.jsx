@@ -38,7 +38,7 @@ const Navbar = () => {
 
                             </ul>
                         </div>
-                        <div className="lg:flex md:flex"><img className="h-[35px] ml-3 pl-r" src="/icon.svg" alt="" />
+                        <div className="lg:flex md:flex"><img className="h-[35px] ml-3 pl-r mt-2" src="/icon.svg" alt="" />
                             <Link to="/"><a className="btn btn-ghost normal-case text-xl">Travel Mania</a></Link></div>
                     </div>
                     <div className="navbar-center hidden lg:flex">

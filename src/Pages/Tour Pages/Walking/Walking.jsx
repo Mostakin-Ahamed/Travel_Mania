@@ -9,7 +9,7 @@ const Walking = () => {
     
 
     return (
-        <div className="grid grid-cols-3 gap-10 justify-evenly mb-8  pb-10 mt-10 h-full ">
+        <div className="grid grid-cols-3 gap-10 justify-evenly mb-8  pb-10 mt-10 h-full w-9/12 mx-auto">
             <Helmet><title>Walking</title></Helmet>
             {
                 walking.map(item=> <TourCard key={item.service_id} item={item}></TourCard>)

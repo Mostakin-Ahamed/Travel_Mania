@@ -29,7 +29,7 @@ const Banner = () => {
                             </div>
                             <div>
                                 <div>
-                                    <Link to={'/allTours'}><button className='w-[257px] absolute h-[55px] bg-[#FE7E41] mt-9 font-semibold text-base text-white spacing-5'>See Our Packages</button></Link>
+                                    <Link to={'/allTours'}><button className='w-[257px] absolute h-[55px] bg-blue-500 mt-9 font-semibold text-base text-white spacing-5'>See Our Packages</button></Link>
                                     <button className='static w-[257px] h-[55px] border-solid border-2 mt-12 ml-5 border-black'></button>
                                 </div>
                                 <div >

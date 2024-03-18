@@ -5,6 +5,7 @@ import Story from "./Components/TouristStory/Story";
 import TourType from "./Components/ToutType/TourType";
 import Offer from "./Components/Offer/Offer";
 import Destinations from "./Components/Destinations/Destinations";
+import Special from "./Components/SpecialOffer/Special";
 
 const Home = () => {
     return (
@@ -13,10 +14,12 @@ const Home = () => {
                 <title> Home</title>
             </Helmet>
             <Banner></Banner>
+            <Destinations></Destinations>
             <TourismAndTravel></TourismAndTravel>
             <Offer></Offer>
-            <Destinations></Destinations>
+
             <TourType></TourType>
+            <Special></Special>
             <Story></Story>
         </div>
     );

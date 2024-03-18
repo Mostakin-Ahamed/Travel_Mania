@@ -8,7 +8,7 @@ const Wildlife = () => {
     
 
     return (
-        <div className="grid grid-cols-3 gap-10 justify-evenly mb-9 pb-10 mt-10 h-full ">
+        <div className="grid grid-cols-3 gap-10 justify-evenly mb-9 pb-10 mt-10 h-full w-9/12 mx-auto">
             <Helmet><title>Wild Life</title></Helmet>
             {
                 wildlife.map(item=> <TourCard key={item.service_id} item={item}></TourCard>)

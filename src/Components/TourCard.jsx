@@ -62,9 +62,9 @@ const TourCard = ({ item }) => {
 
     return (
         <div className="max-h-[650px] pl-5 md:pl-12 lg:pl-10 mb-10">
-            <div className="card w-96 h-full bg-inherit rounded-none  ">
+            <div className="card w-96 h-full bg-inherit rounded-none shadow-md ">
                 <figure className="">
-                    <img src={image} alt="Image" className="  object-contain h-[250px]" />
+                    <img src={image} alt="Image" className=" w-full object-fill h-[250px]" />
                 </figure>
                 <div className="card-body items-start text-center">
                     <h3 className="flex gap-3"> <CiLocationOn />{tour_type} </h3>
@@ -77,8 +77,12 @@ const TourCard = ({ item }) => {
                             <h2 className="card-title"><FaRegClock></FaRegClock> {duration_hours}</h2>
                         </div>
                     </div>
-                    <hr />
+                    <div className="w-full gap-4 mb-3">
+                        <hr className='border border-gray-400' />
+                    </div>
+
                     <div className="flex justify-between w-9/12">
+
                         <Link to={`/details/${_id}`}><button className="btn btn-primary border-none bg-blue-600">Show Details!</button></Link>
                         <button onClick={addToWishlist} className="btn btn-ghost "><FaRegHeart /></button>
                     </div>

@@ -8,7 +8,7 @@ const AirRides = () => {
     const airRides = tour.filter(tour => tour.tour_type ==='Air Rides')
 
     return (
-        <div className="grid grid-cols-3 gap-10 justify-evenly pb-10 mt-10 h-full ">
+        <div className="grid grid-cols-3 gap-10 justify-evenly pb-10 mt-10 h-full w-9/12 mx-auto">
             <Helmet><title>Air Rides</title></Helmet>
             {
                 airRides.map(item=> <TourCard key={item.service_id} item={item}></TourCard>)
