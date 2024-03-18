@@ -81,10 +81,10 @@ const TourCard = ({ item }) => {
                         <hr className='border border-gray-400' />
                     </div>
 
-                    <div className="flex justify-between w-9/12">
+                    <div className="flex justify-between w-Full gap-8">
 
-                        <Link to={`/details/${_id}`}><button className="btn btn-primary border-none bg-blue-600">Show Details!</button></Link>
-                        <button onClick={addToWishlist} className="btn btn-ghost "><FaRegHeart /></button>
+                        <Link to={`/details/${_id}`}><button className="btn btn-outline ">Show Details!</button></Link>
+                        <button onClick={addToWishlist} className="btn btn-ghost ">Add to Wishlist <FaRegHeart /></button>
                     </div>
                 </div>
             </div>
